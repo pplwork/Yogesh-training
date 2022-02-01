@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <h2 id="head">Form</h2>
+            <div class="field">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="field">
+                <label for="gender">Gender: </label>
+                <select id="gender" name="gender" required>
+                    <option value="Enter your Gender">Enter your Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="role">Role:
+                    <input type="radio" name="role" id="admin" value="Admin" required>
+                    <label for="admin">Admin</label>
+                    <input type="radio" name="role" id="user" value="User">
+                    <label for="user">User</label>
+                </label>
+            </div>
+            <div class="field">
+                <label for="Permissions">Permissions: <br>
+                    <input type="checkbox" name="permission" value="permission1">
+                    <label for="permissions">Permission1 </label><br>
+                    <input type="checkbox" name="permission" value="permission2">
+                    <label for="permissions">Permission2 </label><br>
+                    <input type="checkbox" name="permission" value="permission3">
+                    <label for="permissions">Permission3 </label><br>
+                    <input type="checkbox" name="permission" value="permission4">
+                    <label for="permissions">Permission4 </label>
+                </label>
+            </div>
+            <div class="field">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+
+        <div class="output">
+            <h2 class="outputHeading"></h2>
+            <h3 id="confirmEmail"></h3>
+            <h3 id="confirmPassword"></h3>
+            <h3 id="confirmGender"></h3>
+            <h3 id="confirmRole"></h3>
+            <h3 id="confirmPermissions"></h3>
+            <h3 id="confirmBtn"></h3>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

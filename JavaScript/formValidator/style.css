@@ -1,0 +1,27 @@
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
+}
+
+.container {
+  margin-top: 3.5rem;
+}
+
+form,#head {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.field {
+  padding: 0.2rem 0rem;
+}
+
+.outputStyle{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.confirmBtnStyle{
+  padding: 0.5rem 1rem;
+  box-shadow: none;
+  border-radius: 0.3rem;
+}
