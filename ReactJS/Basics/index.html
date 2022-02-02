@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel">
+        // 1......
+        class App extends React.Component {
+
+            // state
+            state = {
+                name: 'Crystal',
+                age: 30
+            }
+
+            handleClick = (e) => {
+                // console.log(e.target);
+                // console.log(this.state); // gives error because this is not pointing to current component instance, so we have to bind this or simply use arrow functions.
+                
+                // setState() to change our state...
+                this.setState({
+                    name: 'Satoshi',
+                    age: 27
+                })
+            }
+
+            handleMouseOver = (e) => {
+                console.log(e.target, e.pageX);
+            }
+
+            handleCopy = (e) => {
+                console.log("Don't try to steal my original work");
+            }
+
+            // to render our code
+            render() {
+                return (
+                    // should have just one root element
+                    <div className="app-content">
+                        <h1>Hello World</h1>
+                        <p>My name is: {this.state.name} and I am {this.state.age}</p>
+                        <button onClick={this.handleClick}>Click Me!</button>
+                        <button onMouseOver={this.handleMouseOver}>Hover Me!</button>
+                        <p onCopy={this.handleCopy}>What you think, you become</p>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById('app'));
+    </script>
+</body>
+
+</html>
