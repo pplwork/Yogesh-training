@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "name": "penny",
+        "breed": "Birman",
+        "age": 5
+    },
+    {
+        "id": 1,
+        "name": "ketty",
+        "breed": "Balinese",
+        "age": 3
+    },
+    {
+        "id": 2,
+        "name": "dawn",
+        "breed": "Abyssinian",
+        "age": 9
+    },
+    {
+        "id": 3,
+        "name": "Diamond",
+        "breed": "American Wirehair",
+        "age": 10
+    }
+]
