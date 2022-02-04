@@ -3,21 +3,23 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Post from "./Components/Post";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/:post_id" component={Post} />
+          </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
