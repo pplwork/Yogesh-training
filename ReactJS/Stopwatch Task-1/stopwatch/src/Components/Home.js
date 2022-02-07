@@ -49,15 +49,19 @@ class Home extends Component {
   };
 
   handleLap = () => {
-    let lap = {
-      time: this.state.time,
-    };
+    if (this.state.time === 0) {
+      return;
+    } else {
+      let lap = {
+        time: this.state.time,
+      };
 
-    let arr = [...this.state.laps];
-    arr.push(lap);
-    this.setState({
-      laps: arr,
-    });
+      let arr = [...this.state.laps];
+      arr.push(lap);
+      this.setState({
+        laps: arr,
+      });
+    }
   };
 
   render() {
