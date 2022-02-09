@@ -48,7 +48,7 @@ class Post extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   console.log(state.posts);
-  let id = ownProps.match.params.post_id;
+  let id = ownProps.match.params.post_id * 1; // Convert to string.
   return {
     post: state.posts.find((post) => post.id === id),
   };
